@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Form</title>
+</head>
+<body>
+    <form>
+        <!-- Fieldset for User Details -->
+        <fieldset>
+            <legend>User Details</legend>
+
+            <table>
+                <tr>
+                    <td><label for="username">Username:</label></td>
+                    <td><input type="text" id="username" name="username" required autofocus maxlength="5" pattern="[A-Za-z]+" title="Username should only contain alphabets and be up to 5 characters long."></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required autocomplete="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone" required pattern="[0-9]{1,11}" maxlength="11" title="Phone number should contain only digits and be up to 11 characters long."></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- Fieldset for Upload and Gender -->
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <table>
+                <tr>
+                    <td><label for="upload">Upload Image:</label></td>
+                    <td><input type="file" id="upload" name="upload" accept=".png, .jpg, .jpeg"></td>
+                </tr>
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" required checked>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- Fieldset for Occupation -->
+        <fieldset>
+            <legend>Occupation</legend>
+
+            <table>
+                <tr>
+                    <td><label for="occupation">Occupation:</label></td>
+                    <td>
+                        <select id="occupation" name="occupation">
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="engineer">Engineer</option>
+                            <option value="doctor">Doctor</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
